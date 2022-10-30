@@ -68,4 +68,14 @@ public class ListaZadanDoZrealizowania {
         }
         return Optional.empty();
     }
+
+    // Podpunkt 6
+    public void usunZadanie(String pelnaNazwa) {
+        for (Zadanie zadanie : listaZadan) {
+            if(zadanie.getNazwa().equals(pelnaNazwa)){
+                listaZadan.remove(zadanie);
+                break;
+            }
+        }
+    }
 }
