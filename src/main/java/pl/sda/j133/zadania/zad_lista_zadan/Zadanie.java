@@ -15,6 +15,8 @@ public class Zadanie {
     private String tresc;
     private LocalDateTime dataCzasStworzenia;
 
+    private boolean zrealizowane;
+
     // konstruktor pusty
     public Zadanie() {
         this.dataCzasStworzenia = LocalDateTime.now();

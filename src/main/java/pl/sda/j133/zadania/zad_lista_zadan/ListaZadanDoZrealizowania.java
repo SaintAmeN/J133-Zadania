@@ -78,4 +78,29 @@ public class ListaZadanDoZrealizowania {
             }
         }
     }
+
+    // Punkt e.I
+    // Dopisać metodę "oznacz zadanie za zrealizowane"
+    //          - musimy podać pełną nazwę zadania jako parametr
+    public void zaznaczZrealizowane(String pelnaNazwa) {
+        for (Zadanie zadanie : listaZadan) {
+//            if(zadanie.getNazwa().contains(pelnaNazwa)){
+            if(zadanie.getNazwa().equals(pelnaNazwa)){
+                zadanie.setZrealizowane(true);
+                break;
+            }
+        }
+    }
+
+
+
+    // Punkt e.II
+    // Wypisać (na konsolę) zadania zrealizowane
+    public void wypiszZrealizowane() {
+        for (Zadanie zadanie : listaZadan) {
+            if (zadanie.isZrealizowane()){
+                System.out.println(zadanie.getNazwa());
+            }
+        }
+    }
 }
