@@ -29,9 +29,40 @@ public class ListaZadanDoZrealizowania {
 //        return null;
 //    }
 
-    public Optional<Zadanie> znajdzZadanie(String pelnaNazwa) {
+    // Podpunkt 2
+    public boolean znajdzZadanie(String pelnaNazwa) {
         for (Zadanie zadanie : listaZadan) {
             if(zadanie.getNazwa().equals(pelnaNazwa)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // Podpunkt 3
+    public boolean znajdzZadanieFraza(String szukanaFraza) {
+        for (Zadanie zadanie : listaZadan) {
+            if(zadanie.getNazwa().contains(szukanaFraza)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // Podpunkt 4
+    public Optional<Zadanie> zwrocZadanie(String pelnaNazwa) {
+        for (Zadanie zadanie : listaZadan) {
+            if(zadanie.getNazwa().equals(pelnaNazwa)){
+                return Optional.of(zadanie);
+            }
+        }
+        return Optional.empty();
+    }
+
+    // Podpunkt 5
+    public Optional<Zadanie> zwrocZadanieFraza(String szukanaFraza) {
+        for (Zadanie zadanie : listaZadan) {
+            if(zadanie.getNazwa().contains(szukanaFraza)){
                 return Optional.of(zadanie);
             }
         }

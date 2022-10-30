@@ -19,7 +19,7 @@ public class Main {
 //            System.out.println(z.getTresc());
 //        }
 
-        Optional<Zadanie> optionalZadanie = listaZadan.znajdzZadanie("pawel");
+        Optional<Zadanie> optionalZadanie = listaZadan.zwrocZadanie("pawel");
         if (optionalZadanie.isPresent()) {
             System.out.println(optionalZadanie.get().getTresc());
         }
