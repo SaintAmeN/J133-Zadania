@@ -1,5 +1,8 @@
 package pl.sda.j133.zadania.wzorzec_projektowy;
 
+import pl.sda.j133.zadania.wzorzec_projektowy.singleton.lazy.SingletonPrzelicznikInflacji;
+import pl.sda.j133.zadania.wzorzec_projektowy.singleton.przykladowyprojekt.bad.PrzelicznikInflacji;
+
 /**
  * @author Paweł Recław, AmeN
  * @project zadania
@@ -24,5 +27,7 @@ public class MainOgolnieWzorce {
          *      - JavaEE - Java Enterprise Edition
          *          - Korzystamy z JavaSE - Java Standard Edition
          */
+
+        double inflacja = SingletonPrzelicznikInflacji.getInstance().getInflacja();
     }
 }

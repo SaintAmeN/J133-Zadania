@@ -1,5 +1,6 @@
 package pl.sda.j133.zadania;
 
+import pl.sda.j133.zadania.wzorzec_projektowy.singleton.basic.SingletonPrzelicznikInflacji;
 import pl.sda.j133.zadania.zad_lista_zadan.ListaZadanDoZrealizowania;
 import pl.sda.j133.zadania.zad_lista_zadan.Zadanie;
 
@@ -24,5 +25,6 @@ public class Main {
             System.out.println(optionalZadanie.get().getTresc());
         }
 
+        double inflacja = SingletonPrzelicznikInflacji.INSTANCE.getInflacja();
     }
 }
