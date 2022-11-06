@@ -1,5 +1,11 @@
 package pl.sda.j133.zadania.wzorzec_projektowy.singleton;
 
+import pl.sda.j133.zadania.wzorzec_projektowy.singleton.lazy.SingletonPrzelicznikInflacji;
+import pl.sda.j133.zadania.wzorzec_projektowy.singleton.zadanko.Poczta;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author Paweł Recław, AmeN
  * @project zadania
@@ -22,6 +28,30 @@ public class Main {
         // Kiedy używać:
         //
 
+        int zmienna = 5;
+
+        double inflacjaX = SingletonPrzelicznikInflacji.getInstance().getInflacja();
+        for (int i = 0; i < zmienna; i++) {
+            System.out.println(5);
+        }
+
+        inflacjaX = SingletonPrzelicznikInflacji.getInstance().getInflacja();
+
+        System.out.println("Cześć");
+
+
+        Poczta p = new Poczta();
+        int numerek = p.getNumerekAutomat();
+
+        List<Poczta> list = new ArrayList<Poczta>();
+
+
+        for (int i = 0; i < 4; i++) {
+            list.add(new Poczta());
+        }
+
+
+        System.out.println(numerek);
 
     }
 }

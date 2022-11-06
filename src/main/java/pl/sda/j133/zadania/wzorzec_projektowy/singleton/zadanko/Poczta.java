@@ -6,15 +6,17 @@ package pl.sda.j133.zadania.wzorzec_projektowy.singleton.zadanko;
  * @created 05.11.2022
  */
 public class Poczta {
-    private Rejestracja rejestracja;
-    private PortalInternetowy portalInternetowy;
-    private Automat automat;
+    private Rejestracja rejestracja = new Rejestracja();
+    private PortalInternetowy portalInternetowy = new PortalInternetowy();
+    private Automat automat = new Automat();
+
 
     public int getNumerekPortalInternetowy(){
         return portalInternetowy.nextNumerek();
     }
 
     public int getNumerekAutomat(){
+
         return automat.nextNumerek();
     }
 
